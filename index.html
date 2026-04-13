@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Angoori Atta & Samnak Atta - Premium Quality Aata | Direct WhatsApp Order">
+    <title>Angoori Atta | Premium Aata - Mr Mashroof</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;family=Playfair+Display:wght@700&amp;display=swap');
+
+        :root {
+            --primary: #d97706;
+        }
+
+        .tailwind-ready * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('IMG-20251229-WA0000.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .product-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+
+        .gallery-img {
+            transition: all 0.3s ease;
+        }
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+            filter: brightness(1.1);
+        }
+
+        .whatsapp-btn {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+<body class="tailwind-ready">
+
+    <!-- NAVBAR -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 bg-amber-600 rounded-2xl flex items-center justify-center text-white text-3xl">🌾</div>
+                    <div>
+                        <h1 class="text-3xl font-bold text-amber-800 tracking-tight">Angoori Atta</h1>
+                        <p class="text-xs text-amber-600 -mt-1">Premium • Pure • Fresh</p>
+                    </div>
+                </div>
+
+                <!-- Menu -->
+                <div class="hidden md:flex items-center gap-8 text-lg font-medium">
+                    <a href="#home" class="hover:text-amber-600 transition-colors">Home</a>
+                    <a href="#products" class="hover:text-amber-600 transition-colors">Products</a>
+                    <a href="#gallery" class="hover:text-amber-600 transition-colors">Gallery</a>
+                    <a href="#about" class="hover:text-amber-600 transition-colors">About Us</a>
+                    <a href="#order" class="hover:text-amber-600 transition-colors">Order Now</a>
+                </div>
+
+                <!-- WhatsApp Button -->
+                <a href="https://wa.me/917042739754?text=Hello%20Mr.%20Mashroof%2C%20I%20want%20to%20know%20more%20about%20Angoori%20Atta"
+                   target="_blank"
+                   class="whatsapp-btn flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-3xl font-semibold shadow-lg">
+                    <i class="fab fa-whatsapp text-2xl"></i>
+                    <span>Chat on WhatsApp</span>
+                </a>
+
+                <!-- Mobile Hamburger -->
+                <button onclick="toggleMobileMenu()" class="md:hidden text-3xl text-amber-800">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t">
+            <div class="px-6 py-6 flex flex-col gap-4 text-lg">
+                <a href="#home" class="py-2">Home</a>
+                <a href="#products" class="py-2">Products</a>
+                <a href="#gallery" class="py-2">Gallery</a>
+                <a href="#about" class="py-2">About Us</a>
+                <a href="#order" class="py-2">Order Now</a>
+                <a href="https://wa.me/917042739754" target="_blank" class="bg-green-500 text-white py-4 text-center rounded-3xl font-bold flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-bg h-screen flex items-center text-white">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="max-w-3xl mx-auto">
+                <div class="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md px-6 py-2 rounded-full mb-6">
+                    <span class="text-amber-300">★</span>
+                    <span class="font-semibold">100% Pure • Farm Fresh • No Chemicals</span>
+                </div>
+                <h1 class="text-6xl md:text-7xl font-bold leading-none mb-4">Angoori Atta &amp; Samnak Atta</h1>
+                <p class="text-2xl md:text-3xl mb-8 text-amber-100">Premium quality aata jo ghar ka swad badal de</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a onclick="quickOrder()"
+                       class="bg-amber-600 hover:bg-amber-700 text-white px-10 py-5 rounded-3xl text-xl font-semibold flex items-center justify-center gap-3 shadow-2xl">
+                        <i class="fas fa-shopping-bag"></i>
+                        ORDER NOW ON WHATSAPP
+                    </a>
+                    <a href="#order"
+                       class="border-2 border-white hover:bg-white hover:text-amber-800 text-white px-10 py-5 rounded-3xl text-xl font-semibold flex items-center justify-center gap-3">
+                        <i class="fas fa-info-circle"></i>
+                        SEE ALL PRODUCTS
+                    </a>
+                </div>
+                <div class="mt-12 flex justify-center gap-8 text-sm">
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-green-400"></i>
+                        <span>Free Home Delivery in Gurugram &amp; Delhi</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fas fa-check-circle text-green-400"></i>
+                        <span>Mr. Mashroof</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-10 left-1/2 flex flex-col items-center text-white/70">
+            <p class="text-sm tracking-widest">SCROLL FOR MORE</p>
+            <i class="fas fa-chevron-down animate-bounce text-3xl mt-2"></i>
+        </div>
+    </section>
+
+    <!-- PRODUCTS SECTION -->
+    <section id="products" class="py-20 bg-amber-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <span class="px-4 py-2 bg-amber-200 text-amber-800 rounded-full text-sm font-semibold">OUR BEST SELLERS</span>
+                <h2 class="text-5xl font-bold text-amber-900 mt-4">Angoori Atta &amp; Samnak Atta</h2>
+                <p class="text-xl text-amber-700 mt-2">Pure, fresh &amp; packed with love</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Product Card 1 -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <img src="IMG-20251229-WA0001.jpg" alt="Angoori Atta" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-2xl font-semibold">Angoori Atta</h3>
+                                <p class="text-amber-600">5kg / 10kg Pack</p>
+                            </div>
+                            <span class="bg-green-100 text-green-700 text-xs px-4 py-2 rounded-3xl font-bold">BESTSELLER</span>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4">Premium wheat flour - soft, tasty &amp; healthy</p>
+                        <button onclick="orderProduct('Angoori Atta 5kg')"
+                                class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-3xl font-semibold flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 2 -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <img src="IMG-20251229-WA0002.jpg" alt="Angoori Atta" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-2xl font-semibold">Angoori Atta</h3>
+                                <p class="text-amber-600">10kg / 20kg Pack</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4">Extra fine quality for perfect rotis</p>
+                        <button onclick="orderProduct('Angoori Atta 10kg')"
+                                class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-3xl font-semibold flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 3 -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <img src="IMG-20251229-WA0003.jpg" alt="Samnak Atta" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-2xl font-semibold">Samnak Atta</h3>
+                                <p class="text-amber-600">5kg / 10kg Pack</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4">Special multigrain blend</p>
+                        <button onclick="orderProduct('Samnak Atta 5kg')"
+                                class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-3xl font-semibold flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Product Card 4 -->
+                <div class="product-card bg-white rounded-3xl overflow-hidden shadow-xl">
+                    <img src="IMG-20251229-WA0004.jpg" alt="Samnak Atta" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-2xl font-semibold">Samnak Atta</h3>
+                                <p class="text-amber-600">10kg / 20kg Pack</p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-600 mt-4">High protein &amp; nutritious</p>
+                        <button onclick="orderProduct('Samnak Atta 10kg')"
+                                class="mt-6 w-full bg-green-500 hover:bg-green-600 text-white py-4 rounded-3xl font-semibold flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp"></i> Order on WhatsApp
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-bold text-amber-900">Our Products in Real</h2>
+                <p class="text-xl text-amber-700">Packaging, quality &amp; freshness captured</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+                <!-- All your photos automatically added -->
+                <img src="IMG-20251229-WA0000.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0001.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0002.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0003.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0004.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0005.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0006.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0007.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0015.jpg" alt="Samnak Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0016.jpg" alt="Samnak Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0017.jpg" alt="Samnak Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0018.jpg" alt="Samnak Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0019.jpg" alt="Samnak Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0020.jpg" alt="Samnak Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0021.jpg" alt="Samnak Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0022.jpg" alt="Samnak Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0023.jpg" alt="Samnak Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0024.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0025.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0026.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0027.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0028.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0029.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+                <img src="IMG-20251229-WA0030.jpg" alt="Angoori Atta" class="gallery-img w-full aspect-square object-cover rounded-3xl shadow-md">
+            </div>
+        </div>
+    </section>
+
+    <!-- ORDER FORM SECTION -->
+    <section id="order" class="py-20 bg-amber-900 text-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <h2 class="text-5xl font-bold">Place Your Order</h2>
+                <p class="text-amber-200 text-xl mt-3">Direct WhatsApp pe order aayega – sirf 10 seconds mein!</p>
+            </div>
+
+            <form id="orderForm" onsubmit="handleOrderSubmit(event)" class="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-sm mb-2">Your Name</label>
+                        <input type="text" id="name" value="Mr Mashroof" required
+                               class="w-full px-6 py-5 rounded-3xl bg-white/20 border border-white/30 focus:outline-none focus:border-white text-white placeholder:text-white/70">
+                    </div>
+                    <div>
+                        <label class="block text-sm mb-2">Phone Number</label>
+                        <input type="tel" id="phone" value="7042739754" required
+                               class="w-full px-6 py-5 rounded-3xl bg-white/20 border border-white/30 focus:outline-none focus:border-white text-white placeholder:text-white/70">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm mb-2">Select Product</label>
+                        <select id="product" class="w-full px-6 py-5 rounded-3xl bg-white/20 border border-white/30 focus:outline-none focus:border-white text-white">
+                            <option value="Angoori Atta 5kg">Angoori Atta - 5kg</option>
+                            <option value="Angoori Atta 10kg">Angoori Atta - 10kg</option>
+                            <option value="Angoori Atta 20kg">Angoori Atta - 20kg</option>
+                            <option value="Samnak Atta 5kg">Samnak Atta - 5kg</option>
+                            <option value="Samnak Atta 10kg">Samnak Atta - 10kg</option>
+                            <option value="Samnak Atta 20kg">Samnak Atta - 20kg</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm mb-2">Quantity</label>
+                        <input type="number" id="quantity" value="1" min="1" required
+                               class="w-full px-6 py-5 rounded-3xl bg-white/20 border border-white/30 focus:outline-none focus:border-white text-white">
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label class="block text-sm mb-2">Delivery Address</label>
+                        <select id="address" class="w-full px-6 py-5 rounded-3xl bg-white/20 border border-white/30 focus:outline-none focus:border-white text-white">
+                            <option value="Rajiv Chowk, Gurugram">Rajiv Chowk, Gurugram (Pickup/Delivery)</option>
+                            <option value="Chawri Bazar, Delhi">Chawri Bazar, Delhi (Pickup/Delivery)</option>
+                            <option value="Other">Other Address (type below)</option>
+                        </select>
+                    </div>
+
+                    <div class="md:col-span-2">
+                        <label class="block text-sm mb-2">Any Special Note / Additional Address</label>
+                        <textarea id="note" rows="3"
+                                  class="w-full px-6 py-5 rounded-3xl bg-white/20 border border-white/30 focus:outline-none focus:border-white text-white placeholder:text-white/70"
+                                  placeholder="e.g. 2nd floor, near metro station..."></textarea>
+                    </div>
+                </div>
+
+                <button type="submit"
+                        class="mt-10 w-full bg-green-500 hover:bg-green-600 py-7 text-2xl font-bold rounded-3xl flex items-center justify-center gap-4 shadow-2xl">
+                    <i class="fab fa-whatsapp text-4xl"></i>
+                    SEND ORDER TO WHATSAPP
+                </button>
+                <p class="text-center text-amber-200 text-sm mt-4">Order instantly on +91 70427 39754</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-20 bg-amber-50">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-5xl font-bold text-amber-900">Mr. Mashroof</h2>
+                <p class="text-3xl text-amber-700 mt-2">Angoori Atta &amp; Samnak Atta</p>
+                <div class="mt-8 space-y-6 text-lg">
+                    <div class="flex gap-4">
+                        <i class="fas fa-store text-4xl text-amber-600 mt-1"></i>
+                        <div>
+                            <p class="font-semibold">Shop 1:</p>
+                            <p>Rajiv Chowk, Gurugram, Haryana</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-store text-4xl text-amber-600 mt-1"></i>
+                        <div>
+                            <p class="font-semibold">Shop 2:</p>
+                            <p>Chawri Bazar, Delhi</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <i class="fas fa-phone text-4xl text-amber-600 mt-1"></i>
+                        <div>
+                            <p class="font-semibold">WhatsApp / Call</p>
+                            <a href="https://wa.me/917042739754" target="_blank" class="text-3xl font-bold text-green-600">70427 39754</a>
+                        </div>
+                    </div>
+                </div>
+                <p class="mt-8 text-gray-600 leading-relaxed">
+                    Fresh, pure aur chemical-free aata ghar tak. Angoori Atta aur Samnak Atta – dono varieties mein best quality guaranteed.
+                </p>
+            </div>
+            <div class="rounded-3xl overflow-hidden shadow-2xl">
+                <img src="IMG-20251229-WA0024.jpg" alt="Mr Mashroof Business" class="w-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-amber-950 text-white py-12">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <div class="flex justify-center gap-8 text-4xl mb-8">
+                <a href="https://wa.me/917042739754" target="_blank" class="hover:text-green-400"><i class="fab fa-whatsapp"></i></a>
+                <a href="tel:7042739754" class="hover:text-amber-400"><i class="fas fa-phone"></i></a>
+            </div>
+            <p class="text-amber-400">© Angoori Atta • Mr. Mashroof</p>
+            <p class="text-sm mt-2">Rajiv Chowk, Gurugram &amp; Chawri Bazar, Delhi</p>
+            <p class="text-xs mt-6 opacity-60">Website designed for instant WhatsApp orders</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind initialization
+        function initializeTailwind() {
+            return {
+                config(userConfig = {}) {
+                    return {
+                        configUser: userConfig,
+                        theme: {
+                            extend: {
+                                colors: {
+                                    primary: '#d97706'
+                                }
+                            }
+                        }
+                    }
+                },
+                theme: {
+                    extend: {}
+                }
+            }
+        }
+
+        // Run Tailwind
+        document.addEventListener('DOMContentLoaded', () => {
+            const config = initializeTailwind().config()
+            // This makes Tailwind work with custom colors
+            console.log('%c✅ Angoori Atta website loaded successfully!', 'color:#d97706; font-size:16px; font-weight:bold')
+        })
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu')
+            menu.classList.toggle('hidden')
+        }
+
+        // Quick order from hero
+        function quickOrder() {
+            const message = `Hello Mr. Mashroof! I want to order Angoori Atta from your website. Please send details.`
+            window.open(`https://wa.me/917042739754?text=${encodeURIComponent(message)}`, '_blank')
+        }
+
+        // Order single product
+        function orderProduct(productName) {
+            const message = `Hello Mr. Mashroof!%0AI want to order:%0A${productName}%0AName: Mr Mashroof%0APlease confirm availability and price.`
+            window.open(`https://wa.me/917042739754?text=${message}`, '_blank')
+        }
+
+        // Main order form handler
+        function handleOrderSubmit(e) {
+            e.preventDefault()
+
+            const name = document.getElementById('name').value
+            const phone = document.getElementById('phone').value
+            const product = document.getElementById('product').value
+            const quantity = document.getElementById('quantity').value
+            const address = document.getElementById('address').value
+            const note = document.getElementById('note').value
+
+            const fullMessage = `🚨 NEW ORDER FROM WEBSITE  🚨%0A%0A` +
+                               `Name: ${name}%0A` +
+                               `Phone: ${phone}%0A` +
+                               `Product: ${product}%0A` +
+                               `Quantity: ${quantity}%0A` +
+                               `Address: ${address}%0A` +
+                               `Note: ${note}%0A%0A` +
+                               `Please confirm and tell me the price & delivery time. Thank you!`
+
+            // Open WhatsApp with complete order details
+            window.open(`https://wa.me/917042739754?text=${fullMessage}`, '_blank')
+
+            // Reset form
+            e.target.reset()
+
+            // Success message
+            alert('✅ Order sent to WhatsApp! Mr. Mashroof will reply soon.')
+        }
+    </script>
+</body>
+</html>
